@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Test_test {
     public static void main(String[] args) {
-
+//лол
         int[] arrayA = {5, 2, 4, 6, 1, 3, 2, 6};
         int p = 1;
         int r = arrayA.length;
