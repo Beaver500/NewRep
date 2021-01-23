@@ -10,9 +10,7 @@ class Product{
     }
 }
 
-/*
- * Задача, есть рейсы автобусов, чем ближе автобус тем раньше он поедет.
- * */
+
 // создаем макет "Автобуса"
 /*class TransportSchedule implements Comparable<TransportSchedule> {
     String bus;

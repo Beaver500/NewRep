@@ -1,20 +1,24 @@
 package Scribble.TEST;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class MarcoPolo {
     public static void main(String[] args) {
 // Задачки по книге "Грокаем алгоритмы"
 
         /*
-        * Бинарный поиск, знаем что ищем, массив должен быть отсортирован.
-        * Делим массив на 2, берем середину и сравнимае с тем что есть, > & < ?
-        * в зависимости от условия движемся в определенную сторону.
+         * Бинарный поиск, знаем что ищем, массив должен быть отсортирован.
+         * Делим массив на 2, берем середину и сравнимае с тем что есть, > & < ?
+         * в зависимости от условия движемся в определенную сторону.
          * */
+        Random random = new Random();
+        int[] array = new int[10];
 
-        
+        for (int i = 0; i < SIZE; i++) {
 
-        
+        }
+
 
     }
 
@@ -72,10 +76,10 @@ public class MarcoPolo {
     }
 
 
-    private static int[] marge2(int[] arrayA, int startIndex, int middle, int endIndex) {
+    private static int sortBinar(int[] array, int item) {
+        int id = 0;
 
-
-        return null;
+        return id;
     }
 
 
