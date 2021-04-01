@@ -91,4 +91,9 @@ public class MainMergesort {
         }
         return result;
     }
+
+
+    public static int[] quickSort (int[] array1){
+        return null;
+    }
 }
