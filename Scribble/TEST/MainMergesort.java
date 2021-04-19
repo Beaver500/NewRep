@@ -1,5 +1,8 @@
 package Scribble.TEST;
 
+import java.lang.reflect.Array;
+import java.util.Collection;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -43,16 +46,26 @@ public class MainMergesort {
      *
      * */
     public static void main(String[] args) {
-        int[] array1 = {5, 2, 4, 6, 1, 3, 2, 6};
-        int[] result = mergesort(array1);
+//        Product product = new Product(null,0,null);
+
+        Random random = new Random();
+        int[] array1 = new int[4];
+
+        for (int i = 0; i < array1.length; i++) {
+            array1[i] = random.nextInt(20 + 1) - 5;
+        }
+
+        System.out.println(Arrays.toString(array1));
+        System.out.println();
+
+        int[] result = bubbleSort(array1);
         System.out.println(Arrays.toString(result));
     }
 
     public static int[] mergesort(int[] array1) {
 //        int[] buffer1 = Arrays.copyOf(array1, array1.length);
         int[] buffer = new int[array1.length];
-        int[] result = mergesortInner(array1, buffer, 0, array1.length);
-        return result;
+        return mergesortInner(array1, buffer, 0, array1.length);
     }
 
     /**
@@ -60,8 +73,6 @@ public class MainMergesort {
      * @param buffer     Буфер. Размер должен быть равен размеру array1.
      * @param startIndex Начальный индекс в array1 для сортировки.
      * @param endIndex   Конечный индекс в array1 для сортировки.
-     * @param
-     * @return
      */
     public static int[] mergesortInner(int[] array1, int[] buffer, int startIndex, int endIndex) {
         if (startIndex >= endIndex - 1) {
@@ -70,6 +81,7 @@ public class MainMergesort {
 
 
         int middle = (startIndex + endIndex) / 2;
+
         int[] sorted1 = mergesortInner(array1, buffer, startIndex, middle);
         int[] sorted2 = mergesortInner(array1, buffer, middle, endIndex);
 
@@ -78,7 +90,7 @@ public class MainMergesort {
         int index2 = middle;
         int destIndex = startIndex;
 
-        int[] result = sorted1 == array1 ? buffer : array1;
+        int[] result = sorted1 == array1 ? buffer : array1;//?
 
         while (index1 < middle && index2 < endIndex) {
             result[destIndex++] = sorted1[index1] < sorted2[index2] ? sorted1[index1++] : sorted2[index2++];
@@ -93,7 +105,23 @@ public class MainMergesort {
     }
 
 
-    public static int[] quickSort (int[] array1){
-        return null;
+    public static int[] bubbleSort(int[] array1) {
+        int q;
+        for (int i = 0; i < array1.length - 1; i++) {
+            for (int j = 1; j < array1.length; j++) {
+                if (array1[i] > array1[j]) {
+
+                    q = array1[i];
+                    array1[i] = array1[j];
+                    array1[j] = q;
+
+
+                }
+            }
+
+        }
+
+
+        return array1;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class MainSort {
     public static void main(String[] args) {
-        //        Product product = new Product(null,0,null);
+        //   Product product = new Product(null,0,null);
 
         Random random = new Random();
         int[] array1 = new int[4];
@@ -40,13 +40,10 @@ public class MainSort {
 
     public static int[] merge(int[] array, int startIndex, int middle, int endIndex) {
         int[] buffer = new int[array.length];
-
         return null;
     }
 
-    public static int[]babbleSort(int [] array1){
-
-
+    public static int[] babbleSort(int[] array1) {
         int buf;
         boolean maas = false;
         while (!maas) {
@@ -61,12 +58,8 @@ public class MainSort {
                     array1[i + 1] = buf;
 
                 }
-
-
             }
         }
-
         return array1;
     }
-
 }
