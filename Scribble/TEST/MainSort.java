@@ -44,6 +44,7 @@ public class MainSort {
     }
 
     public static int[] babbleSort(int[] array1) {
+        //вариант с while и логической переменной
         int buf;
         boolean maas = false;
         while (!maas) {
@@ -61,5 +62,25 @@ public class MainSort {
             }
         }
         return array1;
+
+//        Вариант с 2 циклами
+/*
+        int q;
+        for (int i = 0; i < array1.length - 1; i++) {
+            for (int j = i+1; j < array1.length; j++) {
+                if (array1[i] > array1[j]) {
+
+                    q = array1[i];
+                    array1[i] = array1[j];
+                    array1[j] = q;
+
+
+                }
+            }
+
+        }
+        */
+
     }
+
 }

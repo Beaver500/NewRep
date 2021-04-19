@@ -108,7 +108,7 @@ public class MainMergesort {
     public static int[] bubbleSort(int[] array1) {
         int q;
         for (int i = 0; i < array1.length - 1; i++) {
-            for (int j = 1; j < array1.length; j++) {
+            for (int j = i+1; j < array1.length; j++) {
                 if (array1[i] > array1[j]) {
 
                     q = array1[i];
